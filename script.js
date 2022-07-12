@@ -9,35 +9,36 @@ function myColour() {
     // Get the value of blue color
     var blue = document.getElementById('blue').value;
 
-    // rgb() function is used to create the color
-    // from red, green and blue values
-    var colour = 'rgb(' + red + ',' + green + ',' + blue + ')';
 
-    // Change background colour with the 
-    // color obtained by rgb function
-    document.body.style.backgroundColor = colour;
+    var a = document.getElementById('a');
+    
 
-    // Set the obtained rgb() colour code in the
-    // input text field having id=box  
-    document.getElementById('box').value = 'RGB ( ' + red + ', ' + green + ', ' + blue + ' )';
 
+    var rgb = 'rgb(' + red + ',' + green + ',' + blue + ')';
+    var rgba = 'rgba(' + red + ',' + green + ',' + blue + ',' + a.value +'%' + ')';
+
+
+    document.body.style.backgroundColor = rgba;
+ 
+    document.getElementById('box').value = 'RGBa ( ' + red + ', ' + green + ', ' + blue + ', ' + a.value +'%' + ' )';
+
+    a.style.background = 'linear-gradient(to right, white,' + rgb + ')';
 }
 
 function fundo() {
     document.body.style.backgroundColor = 'rgb(0,0,0)';
+    a.style.background = 'linear-gradient(to right, white, rgb(0,0,0))';
 }
+ 
 
-// On changing red range slider myColour()
-// function is called  
 document.getElementById('red')
     .addEventListener('input', myColour);
 
-// On changing green range slider myColour()
-// function is called
 document.getElementById('green')
     .addEventListener('input', myColour);
 
-// On changing blue range slider myColour()
-// function is called
 document.getElementById('blue')
+    .addEventListener('input', myColour);
+
+document.getElementById('a')
     .addEventListener('input', myColour);
