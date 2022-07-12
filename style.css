@@ -2,16 +2,14 @@
     margin: 0;
     padding: 0;
 }
+
 body {
-    margin: 0;
-    padding: 0;
-    display: grid;
-    place-items: center;
-    height: 100vh;
+    display: flex;
+    justify-content: center;
 }
 
-
-.main {
+main {
+    margin-top: 40px;
     height: 370px;
     width: 300px;
     background: #333;
@@ -34,7 +32,7 @@ body {
 input[type="range"] {
     -webkit-appearance: none;
     height: 10px;
-    width: 80%;
+    width: 255px;
     border-radius: 20px;
     outline: none;
 }
