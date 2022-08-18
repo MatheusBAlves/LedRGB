@@ -11,16 +11,17 @@ function myColour() {
 
 
     var a = document.getElementById('a');
-    
+
+    var box = document.getElementById('box');
 
 
     var rgb = 'rgb(' + red + ',' + green + ',' + blue + ')';
-    var rgba = 'rgba(' + red + ',' + green + ',' + blue + ',' + a.value +'%' + ')';
+    var rgba = 'rgba(' + red + ',' + green + ',' + blue + ',' + a.value + '%' + ')';
 
 
     document.body.style.backgroundColor = rgba;
- 
-    document.getElementById('box').value = 'RGBa ( ' + red + ', ' + green + ', ' + blue + ', ' + a.value +'%' + ' )';
+
+    box.value = 'RGBa ( ' + red + ', ' + green + ', ' + blue + ', ' + a.value + '%' + ' )';
 
     a.style.background = 'linear-gradient(to right, white,' + rgb + ')';
 }
@@ -29,7 +30,7 @@ function fundo() {
     document.body.style.backgroundColor = 'rgb(0,0,0)';
     a.style.background = 'linear-gradient(to right, white, rgb(0,0,0))';
 }
- 
+
 
 document.getElementById('red')
     .addEventListener('input', myColour);
