@@ -20,7 +20,7 @@ main {
     color: #fff;
 }
 
-#box {
+#colorInformation {
     height: 40px;
     width: 80%;
     border: none;
@@ -31,7 +31,7 @@ main {
 }
 
 input[type="range"] {
-    -webkit-appearance: none;
+    appearance: none;
     height: 10px;
     width: 260px;
     border-radius: 20px;
@@ -39,24 +39,29 @@ input[type="range"] {
 }
 
 input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
+    appearance: none;
     height: 5px;
     width: 5px;
     padding: 10px;
-    background: #fff;
+    background: black;
     border-radius: 50%;
     cursor: pointer;
 }
 
-
-input#red {
-    background: linear-gradient(to left, rgb(255, 0, 0), rgb(0, 0, 0));
+.color-picker {
+    position: relative;
 }
 
-input#green {
-    background: linear-gradient(to left, rgb(0, 255, 0), rgb(0, 0, 0));
+.color-indicator {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    background-color: #fff;
+    border-radius: 50%;
+    vertical-align: middle;
 }
 
-input#blue {
-    background: linear-gradient(to left, rgb(0, 0, 255), rgb(0, 0, 0));
+#color-picker {
+    display: inline-block;
+    vertical-align: middle;
 }
